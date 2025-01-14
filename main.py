@@ -13,9 +13,9 @@ def main():
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
 
-    while:
+    while True:
     
-    
+
         pygame.display.flip()
 
 if __name__ == "__main__":
