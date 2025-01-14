@@ -6,6 +6,11 @@ from constants import *
 from circleshape import *
 from player import *
 
+updatable = pygame.sprite.Group()
+drawable = pygame.sprite.Group()
+
+Player.containers = (updatable, drawable)
+
 def main():
 
     pygame.init()
@@ -30,7 +35,8 @@ def main():
 
         screen.fill((0, 0, 0))
 
-        player1.draw(screen)
+        updatable.update(dt)
+        drawable.draw(screen)
 
         pygame.display.flip()
 
