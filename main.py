@@ -2,19 +2,23 @@
 # the open-source pygame library
 # throughout this file
 import pygame
+
 from constants import *
-from circleshape import *
-from player import *
+from circleshape import CircleShape
+from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
+from shot import Shot
 
 updatable = pygame.sprite.Group()
 drawable = pygame.sprite.Group()
 asteroids = pygame.sprite.Group()
+shotgroup = pygame.sprite.Group()
 
 Player.containers = (updatable, drawable)
 Asteroid.containers = (asteroids, updatable, drawable)
 AsteroidField.containers = (updatable)
+Shot.containers = (shotgroup, updatable, drawable)
 
 def main():
 
