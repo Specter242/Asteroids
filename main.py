@@ -44,6 +44,11 @@ def main():
         updatable.update(dt)
         drawable.draw(screen)
 
+        for obj in asteroids:
+            if obj.collision_detection(player1):
+                print("Game over!")
+                return         
+
         pygame.display.flip()
 
         dt = (clock.tick(60) / 1000)
